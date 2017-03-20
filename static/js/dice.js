@@ -5,7 +5,7 @@
     document.ontouchmove = function (e) {
         e.preventDefault();
     };
-    function preload(images, numWrapper, fun) {
+    function preload(images, numWrapper) {
         //预加载图片总数
         var n = images.length,
             loadedimg = 0,
@@ -13,14 +13,13 @@
         for (var i = 0; i < images.length; i++) {
             var imgNew = new Image();
             imgNew.src = images[i];
-            //images[i].src = "../static/img/dice1.png";
             imgNew.onload = function(){//每张图片加载成功后执行
                 loadedimg++;
                 console.log(loadedimg);
                 percent = Math.round(loadedimg/n*100 );
                 numWrapper.innerText = percent + "%";
                 if(percent >= 100){
-
+                    showGamePage();
                 }
             };
         };
@@ -40,7 +39,7 @@
         "../static/img/reward.png",
         "../static/img/yao-pic.png",
         "../static/img/yao-word.png"
-    ], numberWrapper, showGamePage());
+    ], numberWrapper);
 
     function showGamePage(){
         setTimeout(function (){
