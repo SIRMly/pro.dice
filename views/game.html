@@ -11,13 +11,13 @@
     <meta content="telephone=no, address=no" name="format-detection">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" type="text/css" href="/static/css/game.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/game.css">
 </head>
 <body>
 <div class="container">
-    <audio src="http://fun-x.b0.upaiyun.com/chuiniu/audio/14.mp3" preload="auto" id="audio-bg" style="display: none"></audio>
+    <audio src="../static/audio/14.mp3" preload="auto" id="audio-bg" style="display: none"></audio>
     <div id="cude-wrapper">
-        <img src="http://fun-x.b0.upaiyun.com/chuiniu/img/play-state.png" alt="" width="100%" id="state">
+        <img src="../static/img/play-state.png" alt="" width="100%" id="state">
         <div class="cube">
             <div class="side side1">
             </div>
@@ -110,10 +110,8 @@
 <div id="crash">
     <img src="http://fun-x.b0.upaiyun.com/chuiniu/img/0.jpg" alt="" id="crash-img">
 </div>
-<script type="text/javascript" src="http://pingjs.qq.com/h5/stats.js" name="MTAH5" sid="500141455" ></script>
 </body>
-<script type="text/javascript" src="http://fun-x.b0.upaiyun.com/chuiniu/js/shake.js"></script>
-<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../static/js/shake.js"></script>
 <script type="text/javascript">
 window.onload = function () {
     // 防止下滑
@@ -143,7 +141,6 @@ window.onload = function () {
     window.addEventListener('shake', shakeEventDidOccur, false);
     // 摇动
     function shakeEventDidOccur() {
-        socket.send("2");
         var audio       = document.getElementById("audio-bg");
         var audioTime   = true;
         audio.play();
@@ -178,7 +175,7 @@ window.onload = function () {
         window.addEventListener('shake', shakeEventDidOccur, false);
     }, false);
 
-    var socketUrl   = "ws://" + window.location.host + ":8088/join/{{ .Name }}";
+    /*var socketUrl   = "ws://" + window.location.host + ":8088/join/{{ .Name }}";
     var socket      = new WebSocket(socketUrl);
     socket.onopen   = function () {
         // 页面加载完成发送 准备
@@ -191,36 +188,36 @@ window.onload = function () {
                 cubeStop();
                 break;
         }
-    }
+    }*/
 
-    var options = {
-        title   : '喝酒没带骰子？有手机就搞定了！赶紧收藏吧。',
-        desc    : '喝酒没带骰子？有手机就搞定了！赶紧收藏吧。',
-        link    : 'http://game.fun-x.cn',
-        imgUrl  : 'http://game.fun-x.cn/static/img/share.jpg'
-    };
-    wx.config({
-        debug       : false,
-        appId       : '{{ .Appid }}', // 必填，公众号的唯一标识
-        timestamp   : {{ .Timestamp }},
-        nonceStr    : '{{ .NonceStr }}', // 必填，生成签名的随机串
-        signature   : '{{ .Signature }}',
-        jsApiList   : ['onMenuShareAppMessage', 'onMenuShareTimeline']
-    });
-    wx.ready(function(){
-        wx.onMenuShareTimeline({
-            title   : options.desc,
-            link    : options.link,
-            imgUrl  : options.imgUrl
-        });
-
-        wx.onMenuShareAppMessage({
-            title   : options.title,
-            desc    : options.desc,
-            link    : options.link,
-            imgUrl  : options.imgUrl
-        });
-    });
+//    var options = {
+//        title   : '喝酒没带骰子？有手机就搞定了！赶紧收藏吧。',
+//        desc    : '喝酒没带骰子？有手机就搞定了！赶紧收藏吧。',
+//        link    : 'http://game.fun-x.cn',
+//        imgUrl  : 'http://game.fun-x.cn/static/img/share.jpg'
+//    };
+//    wx.config({
+//        debug       : false,
+//        appId       : '{{ .Appid }}', // 必填，公众号的唯一标识
+//        timestamp   : {{ .Timestamp }},
+//        nonceStr    : '{{ .NonceStr }}', // 必填，生成签名的随机串
+//        signature   : '{{ .Signature }}',
+//        jsApiList   : ['onMenuShareAppMessage', 'onMenuShareTimeline']
+//    });
+//    wx.ready(function(){
+//        wx.onMenuShareTimeline({
+//            title   : options.desc,
+//            link    : options.link,
+//            imgUrl  : options.imgUrl
+//        });
+//
+//        wx.onMenuShareAppMessage({
+//            title   : options.title,
+//            desc    : options.desc,
+//            link    : options.link,
+//            imgUrl  : options.imgUrl
+//        });
+//    });
 };
 </script>
 </html>
