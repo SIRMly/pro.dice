@@ -3,13 +3,22 @@ h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
 a {color:#000; text-decoration:none; }
 img {border:none;}
 input,button,textarea,a{-webkit-tap-highlight-color: rgba(255,255,255,0);}
-body,html{
-height:100%; width: 100%; overflow: hidden;
-}
-.container{ height:100%; width:100%; text-align: center; padding: 2.216% 3.333%;  background:url("http://fun-x.b0.upaiyun.com/chuiniu/img/play-bg.jpg") no-repeat;
+body,html{ height:100%; width: 100%; overflow: hidden; }
+.hide{display: none; transition: display linear 1s;}
+.show{display: block; transition: display linear 1s 1s;}
+.container{height:100%; width:100%; text-align: center; padding: 2.216% 3.333%;
+    background:url("../img/play-bg.jpg") no-repeat;
 -webkit-background-size: 100% 100%;
 background-size: 100% 100%; }
-#cude-wrapper{width: 100%; margin-top: 15%;  border-top-right-radius: 56% 20%;border-top-left-radius: 56% 20%; background: url("http://fun-x.b0.upaiyun.com/chuiniu/img/playcon-bg.png") no-repeat; position: relative;
+#page-index{background: url("../img/index-bg.jpg") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;}
+#index-title{width:64%; height: 34.24vw; background: url("../img/index-title.png") no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain; margin: 25% 0 0 15%;}
+#loading{margin-top: 50%; font-size: 22px;}
+#page-game{display: none;}
+#cude-wrapper{width: 100%; margin-top: 15%;  border-top-right-radius: 56% 20%;border-top-left-radius: 56% 20%; background: url("../img/playcon-bg.png") no-repeat; position: relative;
 -webkit-background-size: 100% 100%;
 background-size: 100% 100%;
 overflow: hidden;
@@ -64,7 +73,7 @@ animation: yaoMove 1.2s ease-in-out 1.2s infinite;
 80%{transform: rotate(20deg)}
 100%{transform: rotate(20deg)}
 }
-#reward{position: absolute; right: 3.333%; width: 97.5px; height:75px;  width: 26vw; height: 20vw; bottom: 4%; background: url("http://fun-x.b0.upaiyun.com/chuiniu/img/reward.png") no-repeat;
+#reward{position: absolute; right: 3.333%; width: 97.5px; height:75px;  width: 26vw; height: 20vw; bottom: 4%; background: url("../img/reward.png") no-repeat;
 -webkit-background-size: 100% 100%;
 background-size: 100% 100%;}
 #crash{position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 90;  background-color: rgba(0,0,0,0.8); text-align: center; display: none; }
@@ -99,42 +108,42 @@ border-radius:15px;
 background-size: 100% 100%;
 }
 .side1{
-background: url("http://fun-x.b0.upaiyun.com/chuiniu/img/dice1.png") no-repeat;
+background: url("../img/dice1.png") no-repeat;
 -webkit-background-size: 100% 100%;
 background-size: 100% 100%;
 -webkit-transform:translateZ(30px);
 transform:translateZ(30px);
 }
 .side2{
-background: url("http://fun-x.b0.upaiyun.com/chuiniu/img/dice2.png") no-repeat;
+background: url("../img/dice2.png") no-repeat;
 -webkit-background-size: 100% 100%;
 background-size: 100% 100%;
 -webkit-transform:rotateY(90deg) translateZ(30px);
 transform:rotateY(90deg) translateZ(30px);
 }
 .side3{
-background: url("http://fun-x.b0.upaiyun.com/chuiniu/img/dice3.png") no-repeat;
+background: url("../img/dice3.png") no-repeat;
 -webkit-background-size: 100% 100%;
 background-size: 100% 100%;
 -webkit-transform:rotateY(180deg) translateZ(30px);
 transform:rotateY(180deg) translateZ(30px);
 }
 .side4{
-background: url("http://fun-x.b0.upaiyun.com/chuiniu/img/dice4.png") no-repeat;
+background: url("../img/dice4.png") no-repeat;
 -webkit-background-size: 100% 100%;
 background-size: 100% 100%;
 -webkit-transform:rotateY(-90deg) translateZ(30px);
 transform:rotateY(-90deg) translateZ(30px);
 }
 .side5{
-background: url("http://fun-x.b0.upaiyun.com/chuiniu/img/dice5.png") no-repeat;
+background: url("../img/dice5.png") no-repeat;
 -webkit-background-size: 100% 100%;
 background-size: 100% 100%;
 -webkit-transform:rotateX(90deg) translateZ(30px);
 transform:rotateX(90deg) translateZ(30px);
 }
 .side6{
-background: url("http://fun-x.b0.upaiyun.com/chuiniu/img/dice6.png") no-repeat;
+background: url("../img/dice6.png") no-repeat;
 -webkit-background-size: 100% 100%;
 background-size: 100% 100%;
 -webkit-transform:rotateX(-90deg) translateZ(30px);
