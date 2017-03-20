@@ -1,1 +1,2 @@
-# myPro
+# myproject.dice
+# SIR.M
