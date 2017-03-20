@@ -26,9 +26,9 @@ padding: 18% 0 11%;
 z-index: 30;
 }
 #state{width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 30;
--webkit-animation: stateMove 1.6s ease-in-out forwards;
--o-animation: stateMove 1.6s ease-in-out forwards;
-animation: stateMove 1.6s ease-in-out forwards;
+/*-webkit-animation: stateMove 1.6s ease-in-out forwards;*/
+/*-o-animation: stateMove 1.6s ease-in-out forwards;*/
+/*animation: stateMove 1.6s ease-in-out forwards;*/
 }
 @-webkit-keyframes stateMove {
 from{left: 0;}

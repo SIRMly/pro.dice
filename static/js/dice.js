@@ -81,7 +81,7 @@
             }
             setTimeout(function () {
                 cubeStop();
-            },5000)
+            },3000)
         }
         // 结束
         function  cubeStop(){
