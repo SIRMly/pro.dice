@@ -72,6 +72,7 @@
         window.addEventListener('shake', shakeEventDidOccur, false);
         // 摇动
         function shakeEventDidOccur() {
+            window.removeEventListener('shake', shakeEventDidOccur, false);
             var audio       = document.getElementById("audio-bg");
             var audioTime   = true;
             audio.play();
@@ -91,10 +92,9 @@
                     document.getElementsByClassName("cube")[i].style.transform = "rotateX(" + cubeAngel[randomNum][0] + "deg) rotateY(" + cubeAngel[randomNum][1] + "deg)";
                 }
             }, 3000);
-            window.removeEventListener('shake', shakeEventDidOccur, false);
             setTimeout(function () {
                 window.addEventListener('shake', shakeEventDidOccur, false);
-            }, 3200);
+            }, 200);
         }
 
 

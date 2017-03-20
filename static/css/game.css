@@ -32,14 +32,11 @@ z-index: 30;
     transform-origin:50% 50%;
     -webkit-transform-style:preserve-3d;
     transform-style:preserve-3d;
-    -webkit-transform:translateZ(40px);
-    transform:translateZ(40px);
-
-
-
-/*-webkit-animation: stateMove 1.6s ease-in-out forwards;*/
-/*-o-animation: stateMove 1.6s ease-in-out forwards;*/
-/*animation: stateMove 1.6s ease-in-out forwards;*/
+    -webkit-transform:translateZ(50px);
+    transform:translateZ(50px);
+-webkit-animation: stateMove 1.6s ease-in-out forwards;
+-o-animation: stateMove 1.6s ease-in-out forwards;
+animation: stateMove 1.6s ease-in-out forwards;
 }
 @-webkit-keyframes stateMove {
 from{left: 0;}
